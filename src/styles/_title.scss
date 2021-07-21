@@ -1,0 +1,50 @@
+.Title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: white;
+  position: relative;
+  padding-bottom: 4.5px;
+  letter-spacing: 1rem;
+  &::before {
+    content: "";
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    background-color: #037fff;
+    width: 10rem;
+    height: 0.5rem;
+    border-radius: 50px;
+  }
+  &::after {
+    content: "";
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    background-color: #037308;
+    width: 5rem;
+    height: 0.5rem;
+    border-radius: 50px;
+  }
+  span {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    font-size: 4.56rem;
+    opacity: 0.05;
+  }
+  @media screen and (max-width: 700px) {
+    margin-bottom: 3rem;
+  }
+  @media screen and (max-width: 550px) {
+    span {
+      font-size: 3rem;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    margin-left: -5rem;
+    letter-spacing: 0.3rem;
+    span {
+      font-size: 2rem;
+    }
+  }
+}
