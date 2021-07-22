@@ -1,0 +1,42 @@
+.HomePage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-transform: uppercase;
+}
+
+.text-title {
+  color: rgb(0, 99, 247);
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  .icon-holder {
+    margin-right: 3rem;
+    .icon {
+      height: 3rem;
+      width: 3rem;
+      color: #f1f1f1b7;
+      &:not(:last-child) {
+        font-size: 5rem;
+        transition: all 0.4s ease-in-out;
+      }
+    }
+     .gh:hover {
+        color: rgb(54, 218, 230);
+      }
+      .lk:hover {
+        color: rgb(54, 218, 230);
+      }
+      .ig:hover {
+        color: rgb(54, 218, 230);
+      }
+  }
+}
