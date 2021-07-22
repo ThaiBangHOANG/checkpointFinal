@@ -1,0 +1,82 @@
+.App {
+  .sidebar {
+    width: 16%;
+    height: 100vh;
+    background-color: #191d2b;
+    position: fixed;
+    z-index: 15;
+    border-right: 1px solid #2e344e;
+    transform-origin: left;
+    @media screen and (max-width: 1000px) {
+      transition: all 0.4s ease-in-out;
+      transform: translateX(-100%);
+      width: 30%;
+    }
+    @media screen and (max-width: 375px) {
+      width: 50%;
+    }
+  }
+
+  .nav-toggle {
+    @media screen and (max-width: 1000px) {
+      transition: all 0.4s ease-in-out;
+      transform: translateX(0);
+    }
+  }
+
+  .main-content {
+    width: 84%;
+    margin-left: 16%;
+    background-color: #10121b;
+    min-height: 100vh;
+    background-image: url(../img/dots.svg);
+    display: grid;
+    position: relative;
+    .content {
+      margin: 5rem 15rem;
+    }
+    @media screen and (max-width: 1000px) {
+      margin: 0 auto;
+      width: 100%;
+    }
+    @media screen and (max-width: 400px) {
+      margin: 0 auto;
+      width: 100%;
+      align-content: center;
+    }
+  }
+}
+
+.nav-btn {
+  position: absolute;
+  z-index: 10;
+  right: 5%;
+  top: 10%;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  .line-1,
+  .line-2,
+  .line-3 {
+    display: none;
+    height: 0.3rem;
+    width: 80%;
+    background-color: #3858cc;
+    pointer-events: none;
+    border-radius: 20px;
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    display: block;
+    .line-1,
+    .line-2,
+    .line-3 {
+      display: block;
+    }
+  }
+}
